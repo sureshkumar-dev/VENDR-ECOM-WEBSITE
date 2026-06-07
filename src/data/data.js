@@ -36,6 +36,7 @@ const products = [
     type: "Laptop",
     rating: 4.5,
     quantity: 1,
+    availability:true
   },
   {
     id: 2,
