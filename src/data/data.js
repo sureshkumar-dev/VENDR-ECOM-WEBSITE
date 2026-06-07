@@ -47,6 +47,7 @@ const products = [
     type: "Backpack",
     rating: 4.3,
     quantity: 1,
+    availability:false
   },
   {
     id: 3,
