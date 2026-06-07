@@ -1,0 +1,14 @@
+.cart_head{
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.cart_name{
+    font-size: 40px;
+}
+.cart_list{
+    display: flex;
+}
+.h1_sum{
+     font-weight: 600;
+}

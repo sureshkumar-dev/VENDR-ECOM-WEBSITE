@@ -1,0 +1,150 @@
+
+footer{
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    
+}
+.footer-logo{
+    height: 40px;
+    width: auto;
+    margin-bottom: 20px;
+
+}
+.footer-text{
+    width: 300px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+.logo-div{
+    padding-top:40px ;
+    display: flex;
+    gap: 10px;
+}
+.footer-logo-social{
+    height: 35px;
+    width: auto;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #eeeded;
+}
+.col-head{
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.col-li{
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #606060;
+    cursor: pointer;
+}
+.col-li:hover{
+    color: black;
+    transition: 0.3s;
+}
+.contactus{
+    display: flex;
+    flex-direction: column;
+}
+.contact-input{
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: #eeeded00;
+    border-bottom: 2px solid black;
+    background-image: url("@/assets/icons/name-ip.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+}
+.contact-input2{
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: #eeeded00;
+    border-bottom: 2px solid black;
+    background-image: url("@/assets/icons/mail-ip.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+}
+.contact-input3{
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: #eeeded00;
+    border-bottom: 2px solid black;
+    background-image: url("@/assets/icons/message-ip.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right;
+}
+.contact-button{
+    margin-top: 10px;
+    height: 30px;
+    border: none;
+    background-color: #eeeded;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;   
+}
+.contact-button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.pages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-hr{
+    margin-top: 40px;
+    border: 0.5px solid #cccccc;
+}
+.footer-hr1{
+        border: 0.5px solid #cccccc;
+
+}
+.footer-foot{
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.last-div{
+    display: flex;
+    gap: 20px;
+}
+.last-div p:hover{
+    color: #606060;
+    cursor: pointer;
+}

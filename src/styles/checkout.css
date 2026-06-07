@@ -1,0 +1,26 @@
+.input_box{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: solid 1px ;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+}

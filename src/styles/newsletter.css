@@ -1,0 +1,83 @@
+.newsletter{
+    height:500px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe{
+    height: 350px;
+    width: 1400px;
+    border-radius: 25px;
+    background-color: rgb(144, 109, 176);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image:url("@/assets/images/nwl-bg.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.subscribe-title{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+}
+.subscribe-title2{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+    padding-bottom: 5px;
+}
+.subscribe-text{
+    color: #606060;
+    font-size: 13px;
+    font-weight: 500;
+}
+.subscribe-text2{
+    color: #606060;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+.input-wrap{
+    height: 50px;
+    width: 100%;
+    max-width: 490px;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+
+}
+.input-wrap input{
+    height: 100%;
+    width:80%;
+    border-radius: 30px;
+    border: none;
+    padding-left: 20px;
+    font-size: 15px;
+    outline: none;
+    color: #606060;
+}
+.input-wrap button{
+    height: 100%;
+    width: 20%;
+    border-radius: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    position: absolute;
+    right: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 0;
+
+    cursor: pointer;
+}

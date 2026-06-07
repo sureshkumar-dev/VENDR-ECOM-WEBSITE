@@ -1,0 +1,166 @@
+section {
+    margin-top: 50px;
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.right-div {
+    min-height: 550px;
+    width: 40%;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
+    position: relative;
+}
+
+.hp-tn {
+    height: 500px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sw-tn {
+    height: 180px;
+    float: right;
+    margin-top: 2%;
+    margin-right: 8%;
+    width: auto;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    padding: 15px 25px 15px 25px;
+}
+
+.sw-title {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 600;
+    left: 25px;
+    top: 40%;
+    letter-spacing: 1px;
+}
+
+.sw-price {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    left: 25px;
+    top: 65%;
+    color: #606060;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 5%;
+    margin-top: 3%;
+    line-height: 50px;
+}
+
+.section-description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 5%;
+    margin-top: 1%;
+    color: #606060;
+    line-height: 25px;
+}
+
+.left-div {
+    min-height: 550px;
+    width: 45%;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    float: left;
+    margin-top: 2%;
+    margin-left: 5%;
+    position: relative;
+}
+
+.left-bottom {
+    background-color: rgb(255, 255, 255);
+    min-height: 38%;
+    width: 86%;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
+
+}
+
+.featured {
+    position: absolute;
+    font-size: 0.9rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #f7f7f7;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    font-weight: 500;
+    left: 15px;
+    top: 15px;
+}
+
+.featured-right {
+    position: absolute;
+    font-size: 0.9rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    font-weight: 500;
+    left: 15px;
+    top: 15px;
+}
+
+.hp-info {
+    height: 130px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+.hp-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #606060;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+
+}
+
+.hp-title {
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 5%;
+    bottom: 70px;
+}
+
+.hp-description {
+    position: absolute;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    margin-left: 5%;
+    bottom: 25px;
+    color: #606060;
+    line-height: 22px;
+}

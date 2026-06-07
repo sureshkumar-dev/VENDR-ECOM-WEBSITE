@@ -1,0 +1,39 @@
+.browse-button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 0 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.browse-arrow {
+  height: 50px;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: black;
+  transition: 0.3s ease;
+}
+.browse-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  
+
+}
+.browse-container:hover .browse-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.browse-container:hover .browse-arrow {
+  background-color: #000000; 
+  border: solid 2px rgb(255, 255, 255);
+}

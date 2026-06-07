@@ -1,0 +1,258 @@
+.categories {
+    height: 1100px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.cat-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    padding-bottom: 4%;
+}
+
+.smartwatchs {
+    width: 90%;
+    border-radius: 25px;
+    margin-left: 5%;
+    margin-top: 6%;
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cat-grid {
+    height: 750px;
+    width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.box1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 4;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.all-products {
+    margin-top: 4%;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 5%;
+}
+
+.all-products-text {
+    line-height: 10px;
+    color: #606060;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 5%;
+    line-height: 28px;
+}
+
+.browse-btn-div {
+    height: 50px;
+    width: 200px;
+    margin-left: 5%;
+    position: absolute;
+    top: 600px;
+}
+
+.box2 {
+    grid-column-start: 4;
+    grid-column: span 4;
+    grid-row: 1 / span 2;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.laptop {
+    position: absolute;
+    right: 20px;
+    float: right;
+    margin-left: 5%;
+    width: auto;
+    height: 70%;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 2%;
+
+}
+
+.laptop-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+.laptop-text-h2 {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.laptop-text-p {
+    color: #606060;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    font-weight: 300;
+    margin-left: 5%;
+}
+
+.box3 {
+    grid-column-start: 4;
+    grid-column: span 2;
+    grid-row-start: 3;
+    grid-row: span 2;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.headphone {
+    margin-top: 6%;
+    width: auto;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #91919100;
+    height: 65%;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+
+
+}
+
+.headphone-h2 {
+    margin-top: 4%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: flex-start;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+}
+
+.headphone-p {
+    font-size: 13px;
+    color: #606060;
+    font-weight: 400;
+    position: absolute;
+    left: 40px;
+    bottom: 15px;
+    letter-spacing: 1.5px;
+}
+
+.hp-arrow {
+    height: 50px;
+    padding: 10px;
+    border-radius: 33px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+.box4 {
+    grid-column-start: 6;
+    grid-column: span 2;
+    grid-row-start: 3;
+    grid-row: span 2;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.mobile {
+    height: 65%;
+    margin-top: 6%;
+    border-radius: 25px;
+    padding-left: 65px;
+    padding-right: 65px;
+    border: 2px solid #ccc;
+}
+
+.mobile-h2 {
+    margin-top: 4%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: flex-start;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+}
+
+.mobile-p {
+    font-size: 13px;
+    color: #606060;
+    font-weight: 400;
+    position: absolute;
+    left: 40px;
+    bottom: 15px;
+    letter-spacing: 1.5px;
+}
+.mobile-arrow{
+    height: 50px;
+    padding: 10px;
+    border-radius: 33px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+.cat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6%;
+}
+
+.all-h1 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+.all-ph {
+    font-size: 17px;
+    width: max-content;
+    line-height: 10px;
+    color: #606060;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}

@@ -1,0 +1,229 @@
+.auth_page {
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc_container {
+    height: 80vh;
+    width: 60%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    display: flex;
+    border-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+
+.left {
+    width: 50%;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    position: relative;
+}
+
+.leftadd {
+    background-color: #786b6b;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.right {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightadd {
+    background-color: #c7c6c6;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+
+.sign-h1 {
+    font-weight: 500;
+}
+
+.cb-p {
+    display: inline;
+
+}
+
+.welcome {
+    font-size: 50px;
+}
+
+.checkbox {
+    display: inline-block;
+}
+
+.signup {
+    padding: 15px;
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+}
+
+.login {
+    padding: 15px;
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+
+}
+
+.goto-login {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+
+}
+
+.goto-login p {
+    color: #d1d5db;
+}
+
+.goto-signup p {
+    color: #d1d5db;
+}
+
+.un-div {
+    border: 1.5px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9fafb;
+
+}
+
+.login-btn {
+    background: #111111;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #4F7CFF;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+}
+
+.signup-btn {
+    background: #111111;
+    color: white;
+}
+
+.signup-btn:hover {
+    background: #4F7CFF;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+}
+
+.google-btn {
+    background: white;
+    border: 1.5px solid #d1d5db;
+    color: #111111;
+}
+
+.google-btn:hover {
+    background: #f3f4f6;
+}
+
+.un-div:focus {
+    border: 1.5px solid #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.15);
+}
+
+.log-btn {
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #111111;
+
+}
+
+
+.ip-rm {
+    display: inline;
+    padding-right: 5px;
+}
+
+.p-rm {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.ip-username {
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 33px;
+    font-size: medium;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.ip-password {
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 33px;
+    font-size: medium;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.pwdlogo {
+    padding-right: 10px;
+
+}
+
+.left-h1 {
+    font-size: 60px;
+    font-weight: 500;
+
+}
+
+.left-p {
+    font-weight: 500;
+}
+
+.left-btn {
+    background: #ffffff;
+    color: #111111;
+    border-radius: 10px;
+    font-weight: 500;
+}
