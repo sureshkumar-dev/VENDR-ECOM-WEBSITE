@@ -58,6 +58,7 @@ const products = [
     type: "Smartwatch",
     rating: 4.4,
     quantity: 1,
+    availability:true,
   },
   {
     id: 4,
