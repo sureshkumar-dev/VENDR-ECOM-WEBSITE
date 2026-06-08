@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "@/styles/index.css"
 import { useContext } from 'react';
 import { Cartcontext } from '@/context/Cartcontext';
-import Newsletter from "@/components/Newsletter.jsx"
+import Newsletter from "@/components/newsletter.jsx"
 import Nav from '@/components/navbar.jsx'
 import droplogo from "@/assets/icons/droplogo.png"
 import Footer from "@/components/footer.jsx"
