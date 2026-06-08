@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { Cartcontext } from '../context/Cartcontext';
 import lock from '@/assets/icons/lock_logo.png'
 import tag from '@/assets/icons/best_logo.png';
-import Newsletter from "@/components/Newsletter.jsx"
+import Newsletter from "@/components/newsletter.jsx"
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 import "@/styles/cart.css"
