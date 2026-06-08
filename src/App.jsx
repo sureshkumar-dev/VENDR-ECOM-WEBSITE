@@ -9,10 +9,10 @@ import PaymentSuccess from '@/pages/PaymentSuccess.jsx';
 import Contact from '@/pages/Contact';
 import Profile from '@/pages/Profile';
 import { useContext } from 'react';
-import { Cartcontext } from './context/Cartcontext';
-import { Cartprovider } from './context/Cartcontext';
+import { Cartcontext } from '@/context/Cartcontext';
+import { Cartprovider } from '@/context/Cartcontext';
 import Cart from '@/pages/Cart';
-import '@/styles/app.css';
+import '@/styles/App.css';
 function App() {
   
   
