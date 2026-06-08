@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Nav from '@/components/navbar.jsx'
 import products from "@/data/data.js";
 import dellogo from "@/assets/icons/deletelogo.png"
-import Footer from "@/components/Footer.jsx"
+import Footer from "@/components/footer.jsx"
 import { useContext } from 'react';
 import { Cartcontext } from '../context/Cartcontext';
 import lock from '@/assets/icons/lock_logo.png'
