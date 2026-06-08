@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from '@/components/navbar.jsx'
 import products from "@/data/data.js";
 import dellogo from "@/assets/icons/deletelogo.png"
@@ -9,6 +9,7 @@ import lock from '@/assets/icons/lock_logo.png'
 import tag from '@/assets/icons/best_logo.png';
 import Newsletter from "@/components/Newsletter.jsx"
 import { useNavigate } from 'react-router';
+import axios from 'axios';
 import "@/styles/cart.css"
 import "../styles/index.css"
 
@@ -36,20 +37,33 @@ const Cart = () => {
       )
     )
   }
-  function deleteitem(id){
+  function deleteitem(id) {
     setcart(
-      cart.filter((item)=> item.id !== id)
-      )
+      cart.filter((item) => item.id !== id)
+    )
   }
-  function checkout(){
-    if(cart.length === 0){
+  const fetchcart = async () => {
+    const token = localStorage.getItem("token");
+    const res = await axios.post('http://localhost:5000/fetchcart',
+      { cart }, {
+      headers: {
+        authorization: token
+      }
+    })
+    console.log(res.data)
+  }
+  useEffect(() => {
+    fetchcart()
+  }, [cart])
+  function checkout() {
+    if (cart.length === 0) {
       alert('your cart is empty please purchase some products')
       return
     }
     navigate('/checkout')
   }
-  const total = cart.reduce((sum,item)=>
-    sum + (item.quantity * item.price),0
+  const total = cart.reduce((sum, item) =>
+    sum + (item.quantity * item.price), 0
   )
   const tax = total * 0.18;
   const grandtotal = total + tax;
@@ -118,7 +132,7 @@ const Cart = () => {
               <h4>Total</h4>
               <h4>₹{grandtotal}</h4>
             </div>
-            <button onClick={()=>{checkout()}} className='bg-black text-white w-full py-2 !rounded-lg !text-[20px]'>Checkout</button>
+            <button onClick={() => { checkout() }} className='bg-black text-white w-full py-2 !rounded-lg !text-[20px]'>Checkout</button>
             <div className='pt-[30px]'>
               <div className='flex items-center gap-1'>
 

@@ -7,8 +7,10 @@ import pwdlogo from "@/assets/icons/visibility_logo.png";
 import google from "@/assets/icons/search.png";
 import person from "@/assets/icons/person_logo.png"
 import close from "@/assets/icons/close_logo.png"
+import { useNavigate } from 'react-router';
 
 const Auth = () => {
+    const navigate = useNavigate()
     const[user,setuser]=useState(null)
     const [login, setlogin] = useState(true)
     const [signup, setsignup] = useState(false)
@@ -89,7 +91,7 @@ const Auth = () => {
         <>
 
             <div className="auth_page relative">
-                <img className='absolute top-3 right-5 cursor-pointer' src={close} alt="" />
+                <img onClick={()=>{navigate('/')}} className='absolute top-3 right-5 cursor-pointer' src={close} alt="" />
                 <div className="acc_container relative">
 
 

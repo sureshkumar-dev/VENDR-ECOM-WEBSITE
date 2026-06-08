@@ -5,9 +5,24 @@ import News from '@/components/news.jsx';
 import Reviews from '@/components/reviews.jsx';
 import Newsletter from '@/components/newsletter.jsx';
 import Footer from '@/components/footer.jsx';
+import axios from 'axios';
+import { useContext, useEffect } from 'react';
+import { Cartcontext } from '../context/Cartcontext';
 import '@/styles/home.css';
 function Home() {
-    
+    const {cart ,setcart} = useContext(Cartcontext)
+    const fetchuser = async() =>{
+        const token = localStorage.getItem("token")
+        const res = await axios.get('http://localhost:5000/profile',{
+            headers:{
+                authorization:token
+            }
+        })
+        console.log('data check' ,res.data)
+    }
+    useEffect(()=>{
+        fetchuser()
+    },[])
     return (
         <>
         <Nav  />

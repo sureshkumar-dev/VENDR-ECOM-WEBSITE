@@ -24,8 +24,10 @@ app.get('/profile', auth, async (req, res) => {
     try {
         const User = await usermodel.findById(req.user.id);
         res.json({
+            cart:User.cartitems,
             User
         })
+        
     } catch (error) {
         console.log(error);
 
@@ -81,6 +83,25 @@ app.post('/auth/login', async (req, res) => {
 
     }
 })
+app.post('/fetchcart', auth, async (req, res) => {
+    console.log("fetch hit");
+    try {
+        const { cart } = req.body;
+        await usermodel.findByIdAndUpdate(
+            req.user.id,
+            {
+                cartitems: cart
+            }
+        );
+        res.json({
+            message: "cart updated"
+        })
+    }catch(error){
+        console.log(error);
+        
+    }
+    
+})
 app.post('/create-order', async (req, res) => {
     const { amount } = req.body;
     const options = {
@@ -107,7 +128,7 @@ app.post('/verify', async (req, res) => {
     console.log(razorpay_order_id,
         razorpay_payment_id,
         razorpay_signature);
-    
+
     const gensignature = crypto.createHmac('sha256', process.env.RAZORPAY_KEY_SECRET).update(razorpay_order_id +
         "|" +
         razorpay_payment_id).digest('hex')

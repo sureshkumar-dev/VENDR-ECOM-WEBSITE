@@ -4,7 +4,9 @@ import fplogo from "@/assets/icons/fb_logo.png";
 import xlogo from "@/assets/icons/x_logo.png";
 import iglogo from "@/assets/icons/org_ig_logo.png";
 import lin from "@/assets/icons/linkedin_logo.png";
+import { useNavigate } from "react-router";
 function Footer() {
+    const navigate = useNavigate()
     return (
         <>
             <footer>
@@ -25,18 +27,18 @@ function Footer() {
                     <div className="pages">
                         <h3 className="col-head">Pages</h3>
                         <ul>
-                            <li className="col-li">Home</li>
-                            <li className="col-li">Categories</li>
-                            <li className="col-li">News</li>
-                            <li className="col-li">Reviews</li>
+                            <li onClick={()=>{navigate('/')}} className="col-li">Home</li>
+                            <li onClick={()=>{navigate('/products')}} className="col-li">Categories</li>
+                            <li onClick={()=>{navigate('/about')}} className="col-li">News</li>
+                            <li onClick={()=>{navigate('/')}} className="col-li">Reviews</li>
                         </ul>
                     </div>
                     <div className="about">
                         <h3 className="col-head">About Us</h3>
                         <ul>
                             <li className="col-li">FAQ</li>
-                            <li className="col-li">Contact</li>
-                            <li className="col-li">Product</li>
+                            <li onClick={()=>{navigate('/')}} className="col-li">Contact</li>
+                            <li onClick={()=>{navigate('/products')}} className="col-li">Product</li>
                             <li className="col-li">Services</li>
                         </ul>
 
