@@ -11,7 +11,14 @@ import razorpay from "./config/razorpay.js"
 import crypto from 'crypto'
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: [
+      "https://vendr-shopping-website.vercel.app"
+    ],
+    credentials: true,
+  })
+);
 dotenv.config()
 console.log(process.env.MONGO_URI);
 connectDb();
