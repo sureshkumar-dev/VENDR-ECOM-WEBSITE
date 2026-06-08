@@ -11,6 +11,9 @@ const Userschema = new mongoose.Schema({
     },
     password:{
         type:String
+    },
+    cartitems:{
+        type:[]
     }
 },{timestamps:true})
 const usermodel = mongoose.model("userdata",Userschema);

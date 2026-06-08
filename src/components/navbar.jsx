@@ -51,11 +51,25 @@ function Nav() {
         { id: 32, name: "boAt Type-C Cable", category: "accessory", brand: "boAt", price: 399, keywords: ["cable", "boat"] },
         { id: 33, name: "Laptop Backpack HP", category: "accessory", brand: "HP", price: 1499, keywords: ["bag", "laptop"] }
     ];
-    const {cart , setcart} = useContext(Cartcontext)
+    const { cart, setcart } = useContext(Cartcontext)
+    const [userdata,setuserdata]=useState()
     const [searchTerm, setSearchTerm] = useState("");
     const [filres, setFilres] = useState([""]);
     const [showres, setShowres] = useState(false);
-
+    const fetchuser = async () => {
+        const token = localStorage.getItem("token")
+        const res = await axios.get('http://localhost:5000/profile', {
+            headers: {
+                authorization: token
+            }
+        })
+        console.log(userdata)
+        setuserdata(res.data.User)
+        console.log('data check', res.data)
+    }
+    useEffect(() => {
+        fetchuser()
+    }, [])
     function handleSearchChange(event) {
         setSearchTerm(event.target.value);
         setShowres(true);
@@ -90,7 +104,16 @@ function Nav() {
         else {
             nav.style.boxShadow = "none";
         }
-    });
+    })
+    function auth(){
+        const token = localStorage.getItem("token")
+        if(token){
+            navigate('/profile')
+        }
+        else{
+            navigate('/auth')
+        }
+    }
     return (
 
         <>
@@ -100,10 +123,10 @@ function Nav() {
                 </div>
                 <div>
                     <ul className="nav-links">
-                        <li onClick={()=>{navigate('/')}}>Home</li>
-                        <li onClick={()=>{ navigate('/products') }}>All Products</li>
-                        <li onClick={()=>{navigate('/about')}}>About Us</li>
-                        <li>Contact</li>
+                        <li onClick={() => { navigate('/') }}>Home</li>
+                        <li onClick={() => { navigate('/products') }}>All Products</li>
+                        <li onClick={() => { navigate('/about') }}>About Us</li>
+                        <li onClick={() => { navigate('/contactus') }}>Contact</li>
                     </ul>
                 </div>
                 <div style={{ display: 'flex', gap: '15px', paddingRight: '20px' }}>
@@ -130,7 +153,7 @@ function Nav() {
                         }} className="cart-icon" src={cartlogo} alt="cart" />
                         <div className="cart-count">{cart.length}</div>
                     </div>
-                    <img className="icon" src={profilelogo} alt="profile" />
+                    <img onClick={() => { auth() }} className="icon" src={profilelogo} alt="profile" />
                 </div>
 
             </nav>

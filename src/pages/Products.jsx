@@ -37,18 +37,31 @@ import keyboard from "@/assets/images/zeb_keyboard.webp";
 import products from '../data/data';
 
 const Products = () => {
-    const {cart , setcart} = useContext(Cartcontext)
+    const { cart, setcart } = useContext(Cartcontext)
     console.log(cart);
-    
+
     const [sort, setsort] = useState("All")
     const [drop, setdrop] = useState(false)
     const [product, setproduct] = useState()
-    const [Price,setPrice]=useState(500)
+    const [Price, setPrice] = useState(500)
 
     const fetchapi = async () => {
         const res = await axios.get('https://dummyjson.com/products/category/smartphones')
         setproduct(res.data)
     }
+    const fetchcart = async () => {
+        const token = localStorage.getItem("token");
+        const res = await axios.post('http://localhost:5000/fetchcart',
+            { cart }, {
+            headers: {
+                authorization: token
+            }
+        })
+        console.log(res.data)
+    }
+    useEffect(()=>{
+        fetchcart()
+    },[cart])
     useEffect(() => {
         fetchapi();
     }, [])
@@ -94,7 +107,7 @@ const Products = () => {
                                 max="1000"
                                 value={Price}
                                 onChange={(e) => setPrice(Number(e.target.value))}
-                                 className='w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-black' />
+                                className='w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-black' />
                             <div className='flex justify-between'>
                                 <p>₹50</p><p>₹{Price}</p>
                             </div>
@@ -136,7 +149,7 @@ const Products = () => {
                                                     <p className='font-[400]'>{items.description}</p>
                                                 </div>
                                                 <div className='flex justify-between'>
-                                                    <p className='m-0 font-[700] text-xl'>₹ {items.price}</p> <button onClick={()=> setcart((prev)=>[...prev,items])} className='bg-black text-white font-[500] px-2 pt-1 pb-1 rounded-3 '>Add to Cart</button>
+                                                    <p className='m-0 font-[700] text-xl'>₹ {items.price}</p> <button onClick={() => setcart((prev) => [...prev, items])} className='bg-black text-white font-[500] px-2 pt-1 pb-1 rounded-3 '>Add to Cart</button>
                                                 </div>
                                             </div>
                                         </>
