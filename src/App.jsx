@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Router,Route,BrowserRouter, Routes } from 'react-router';
 import Home from '@/pages/Home.jsx';
-import Auth from '@/pages/Auth';
-import Products from '@/pages/Products';
-import Checkout from '@/pages/Checkout';
-import About from '@/pages/About';
+import Auth from '@/pages/Auth.jsx';
+import Products from '@/pages/Products.jsx';
+import Checkout from '@/pages/Checkout.jsx';
+import About from '@/pages/About.jsx';
 import PaymentSuccess from '@/pages/PaymentSuccess.jsx';
-import Contact from '@/pages/Contact';
-import Profile from '@/pages/Profile';
+import Contact from '@/pages/Contact.jsx';
+import Profile from '@/pages/Profile.jsx';
 import { useContext } from 'react';
 import { Cartcontext } from '@/context/Cartcontext';
 import { Cartprovider } from '@/context/Cartcontext';

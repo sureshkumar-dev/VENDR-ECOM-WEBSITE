@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '@/components/navbar.jsx'
-import Footer from '@/components/Footer.jsx'
+import Footer from '@/components/footer.jsx'
 import '@/styles/About.css'
 import { useNavigate } from 'react-router'
 
