@@ -5,11 +5,13 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 const Profile = () => {
+    const API = import.meta.env.VITE_API_URL;
+
     const navigate = useNavigate()
-    const[userdata,setuserdata] = useState()
+    const [userdata, setuserdata] = useState()
     const fetchuser = async () => {
         const token = localStorage.getItem("token")
-        const res = await axios.get('http://localhost:5000/profile', {
+        const res = await axios.get(`${API}/profile`, {
             headers: {
                 authorization: token
             }
@@ -50,11 +52,11 @@ const Profile = () => {
 
                 {/* Buttons */}
                 <div className="mt-6 flex gap-3">
-                    <button onClick={()=>{navigate('/')}} className="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                    <button onClick={() => { navigate('/') }} className="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
                         Close
                     </button>
 
-                    <button onClick={()=>{
+                    <button onClick={() => {
                         localStorage.removeItem("token")
                         navigate('/auth')
                     }} className="flex-1 bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">

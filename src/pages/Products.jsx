@@ -37,6 +37,8 @@ import keyboard from "@/assets/images/zeb_keyboard.webp";
 import products from '../data/data';
 
 const Products = () => {
+        const API = import.meta.env.VITE_API_URL;
+
     const { cart, setcart } = useContext(Cartcontext)
     console.log(cart);
 
@@ -51,7 +53,7 @@ const Products = () => {
     }
     const fetchcart = async () => {
         const token = localStorage.getItem("token");
-        const res = await axios.post('http://localhost:5000/fetchcart',
+        const res = await axios.post(`${API}/fetchcart`,
             { cart }, {
             headers: {
                 authorization: token

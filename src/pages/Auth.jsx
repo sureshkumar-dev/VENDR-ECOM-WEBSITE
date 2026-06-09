@@ -10,6 +10,7 @@ import close from "@/assets/icons/close_logo.png"
 import { useNavigate } from 'react-router';
 
 const Auth = () => {
+    const API = import.meta.env.VITE_API_URL;
     const navigate = useNavigate()
     const[user,setuser]=useState(null)
     const [login, setlogin] = useState(true)
@@ -25,7 +26,7 @@ const Auth = () => {
     })
     const fetchuser = async() => {
         const token = await localStorage.getItem('token')
-        const res = await axios.get('http://localhost:5000/profile',{
+        const res = await axios.get(`${API}/profile`,{
             headers:{
                 authorization:token
             }
@@ -42,7 +43,7 @@ const Auth = () => {
     const handlesignup = async(e) => {
         e.preventDefault()
         try{
-            await axios.post('http://localhost:5000/auth/signup',{
+            await axios.post(`${API}/auth/signup`,{
             username:regData.username,
             email:regData.email,
             password:regData.password
@@ -58,7 +59,7 @@ const Auth = () => {
     const handlelogin = async (e) => {
         e.preventDefault()
         try{
-            const response = await axios.post('http://localhost:5000/auth/login',{
+            const response = await axios.post(`${API}/auth/login`,{
             email:loginData.email,
             password:loginData.password
         })

@@ -5,6 +5,8 @@ import { Cartcontext } from '../context/Cartcontext';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 const Checkout = () => {
+        const API = import.meta.env.VITE_API_URL;
+
     const navigate = useNavigate()
     const { cart, setcart } = useContext(Cartcontext)
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
@@ -13,7 +15,7 @@ const Checkout = () => {
     const grandtotal = total + tax - discount
     const handlepayment = async () => {
         console.log(import.meta.env.VITE_RAZORPAY_KEY);
-        const amt = await axios.post('http://localhost:5000/create-order', {
+        const amt = await axios.post(`${API}/create-order`, {
             amount: grandtotal
         })
         const order = amt.data

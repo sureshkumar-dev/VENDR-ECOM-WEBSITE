@@ -14,6 +14,8 @@ import "@/styles/cart.css"
 import "../styles/index.css"
 
 const Cart = () => {
+      const API = import.meta.env.VITE_API_URL;
+
   const navigate = useNavigate()
   const { cart, setcart } = useContext(Cartcontext);
   function increase(id) {
@@ -44,7 +46,7 @@ const Cart = () => {
   }
   const fetchcart = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.post('http://localhost:5000/fetchcart',
+    const res = await axios.post(`${API}/fetchcart`,
       { cart }, {
       headers: {
         authorization: token
