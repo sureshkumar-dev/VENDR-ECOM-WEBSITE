@@ -48,6 +48,8 @@ const Auth = () => {
             email:regData.email,
             password:regData.password
         })
+        alert('account created successfully')
+        navigate('/')
         }catch(error){
             console.log(error);
             
@@ -65,6 +67,8 @@ const Auth = () => {
         })
         console.log(response.data)
         localStorage.setItem("token",response.data.token)
+        alert('welcome back')
+        navigate('/')
         }catch(error){
             console.log(error);
             
