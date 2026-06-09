@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import axios from 'axios';
 const Checkout = () => {
         const API = import.meta.env.VITE_API_URL;
-
+    console.log("Razorpay Key:", import.meta.env.VITE_RAZORPAY_KEY_ID);
     const navigate = useNavigate()
     const { cart, setcart } = useContext(Cartcontext)
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
