@@ -11,6 +11,7 @@ import { Cartcontext } from '../context/Cartcontext';
 import '@/styles/home.css';
 function Home() {
     const API = import.meta.env.VITE_API_URL;
+    console.log("API URL =", import.meta.env.VITE_API_URL);
     const {cart ,setcart} = useContext(Cartcontext)
     const fetchuser = async() =>{
         const token = localStorage.getItem("token")
